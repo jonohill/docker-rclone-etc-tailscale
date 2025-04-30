@@ -1,0 +1,11 @@
+
+services:
+
+  rclone_etc_tailscale:
+    build: .
+    environment:
+      - RCLONE_REMOTE=file:///tmp/rclone_etc_tailscale
+      - TAILSCALE_HOSTNAME=test-rclone-etc-tailscale
+      - TAILSCALE_AUTH_KEY=${TAILSCALE_AUTH_KEY}
+    volumes:
+      - ${HOME}/.config/rclone/rclone.conf:/data/rclone/rclone.conf:ro
