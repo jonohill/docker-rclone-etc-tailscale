@@ -2,6 +2,10 @@
 
 set -e
 
+mkdir -p /data/mariadb
+mkdir -p /data/rclone
+mkdir -p /data/tailscale
+
 overmind start --processes tailscaled &
 overmind_pid=$!
 

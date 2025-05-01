@@ -1,7 +1,7 @@
 
 services:
 
-  rclone_etc_tailscale:
+  rclone_mysql_tailscale:
     build: .
     environment:
       - RCLONE_REMOTE=file:///tmp/rclone_etc_tailscale

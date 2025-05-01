@@ -3,8 +3,8 @@ FROM ghcr.io/jonohill/docker-overmind:2.5.1 AS overmind
 FROM alpine:3.21.3
 
 RUN apk add --no-cache \
-    etcd \
     jq \
+    mariadb \
     rclone \
     tailscale \
     tmux
